@@ -3,7 +3,15 @@
 #include <time.h>
 /* more headers goes there */
 
-/* betty style doc for function main goes there */
+/**
+ * main - Entry point
+ *
+ * Description: Print whether random number stored in variable is positive
+ * or negative
+ *
+ * Return: 0 (success)
+ */
+
 int main(void)
 {
 	int n;

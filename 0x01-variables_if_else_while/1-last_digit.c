@@ -1,8 +1,16 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 /* more headers goes there */
 
-/* betty style doc for function main goes there */
+/**
+ * main - Entry point
+ *
+ * Description: print last digit from generated random number
+ *
+ * Return: 0 (success)
+ */
+
 int main(void)
 {
 	int n, last_digit;

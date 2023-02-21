@@ -2,7 +2,7 @@
 
 /**
  * _abs - Entry point
- * @int: int a data type
+ * @n: n represents the integer variable
  *
  * Description: prints absolute value
  *

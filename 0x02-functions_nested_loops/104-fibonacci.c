@@ -12,7 +12,7 @@ int main(void)
 {
 	long int first = 1;
 	long int second = 2;
-	long int next;
+	long int next = first + second;
 	int count;
 
 	printf("%lu, ", first);

@@ -3,39 +3,31 @@
 /**
  * main - Entry point
  *
- * Description: prints the first 98 fibonacci numbers, starting with 1 and 2
+ * Description: print the first 98 fibonacci numbers, starting with 1 and 2
  *
- * Return: 0 (success)
+ * Return: 0(success)
  */
 
 int main(void)
 {
-	int count = 3;
+        long int first = 0;
+        long int second = 1;
+        long int next;
+        int count;
 
-	long int first = 1;
-	long int second = 2;
-	long int next = first + second;
+        while (count < 97)
+        {
+                next = first + second;
+                printf("%lu, ", next);
 
-	printf("%lu, ", first);
-	printf("%lu, ", second);
+                first = second;
+                second = next;
 
-	while (count <= 98)
-	{
-		if (count == 98)
-		{
-			printf("%ld \n", next);
-		}
-		else
-		{
-			printf("%ld, ", next);
-		}
+                count++;
+        }
 
-	first = second;
-	second = next;
+        next = first + second;
+        printf("%lu\n", next);
 
-	next = first + second;
-	count++;
-	}
-
-	return (0);
+        return (0);
 }

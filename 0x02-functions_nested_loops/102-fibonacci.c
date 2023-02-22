@@ -10,8 +10,8 @@
 
 int main(void)
 {
-	long int first = 1;
-	long int second = 2;
+	long int first = 0;
+	long int second = 1;
 	long int next;
 	int count;
 

@@ -13,7 +13,7 @@ int main(void)
 	long int first = 1;
 	long int second = 2;
 	long int next = first + second;
-	int count;
+	int count = 3;
 
 	printf("%lu, ", first);
 	printf("%lu, ", second);

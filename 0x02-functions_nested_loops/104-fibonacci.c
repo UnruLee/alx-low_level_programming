@@ -20,7 +20,7 @@ int main(void)
 		if (count == 98)
 			printf("%lu \n", next);
 		else
-			printf("%lu, " next);
+			printf("%lu, ", next);
 
 	first = second;
 	second = next;

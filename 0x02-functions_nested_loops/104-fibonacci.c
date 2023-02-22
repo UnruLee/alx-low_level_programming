@@ -10,17 +10,18 @@
 
 int main(void)
 {
+	int count = 3;
+
 	long int first = 1;
 	long int second = 2;
 	long int next = first + second;
-	int count = 3;
 
 	printf("%lu, ", first);
 	printf("%lu, ", second);
 
-	while (count < 97)
+	while (count <= 98)
 	{
-		if (count == 96)
+		if (count == 98)
 		{
 			printf("%lu \n", next);
 		}

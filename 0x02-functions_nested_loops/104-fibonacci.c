@@ -20,7 +20,7 @@ int main(void)
 
 	while (count < 97)
 	{
-		if (count == 98)
+		if (count == 96)
 			printf("%lu \n", next);
 		else
 			printf("%lu, ", next);

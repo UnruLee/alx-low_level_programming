@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+/**
+ * main - Entry point
+ *
+ * Description: prints the first 98 fibonacci numbers, starting with 1 and 2
+ *
+ * Return: 0 (success)
+ */
+
+int main(void)
+{
+	long int first = 1;
+	long int second = 2;
+	long int next;
+	int count;
+
+	while (count <= 98)
+	{
+		if (count == 98)
+			printf("%lu \n", next);
+		else
+			printf("%lu, " next);
+
+	first = second;
+	second = next;
+
+	next = first + second;
+	count++;
+	}
+
+	return (0);
+}

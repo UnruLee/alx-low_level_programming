@@ -2,17 +2,18 @@
 
 /**
  * _putchar - Entry point
- * @a: a is an ascii character
+ * @c: a is an ascii character
  *
  * Description: print out '_putchar'
  *
  * Return: 0 (success)
  */
 
-int _putchar(char a)
+int _putchar(char c)
 {
-	char a = '_putchar';
-	_putchar("_putchar\n" + '0');
+	char c  = '_putchar';
+
+	_putchar(c);
 
 	return (0);
 }

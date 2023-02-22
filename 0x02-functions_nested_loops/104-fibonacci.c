@@ -23,11 +23,11 @@ int main(void)
 	{
 		if (count == 98)
 		{
-			printf("%li \n", next);
+			printf("%ld \n", next);
 		}
 		else
 		{
-			printf("%li, ", next);
+			printf("%ld, ", next);
 		}
 
 	first = second;

@@ -15,7 +15,7 @@ int main(void)
 	long int next;
 	int count;
 
-	while (count <= 50)
+	while (count < 49)
 	{
 		next = first + second;
 		printf("%lu, ", next);

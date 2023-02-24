@@ -1,11 +1,8 @@
 #include "main.h"
 
 /**
- * main - Entry point
- *
- * Description: test positive or negative with 0
- *
- * Return: Always 0
+ * main - Test function for positive or negative
+ * Return: 0
  */
 
 int main(void)

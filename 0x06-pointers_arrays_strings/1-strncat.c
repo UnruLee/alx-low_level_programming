@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * *_strcat - Entry point
+ * *_strncat - Entry point
  * @dest: variable character
  * @src: variable character
  * @n: number of string

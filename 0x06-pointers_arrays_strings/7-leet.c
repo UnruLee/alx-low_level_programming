@@ -11,12 +11,22 @@
 
 char *leet(char *s)
 {
+	char value[] = "43071";
+	char lowercase[] = "aeotl";
+	char uppercase[] = "AEOTL";
 	int i;
+	int j;
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (s[i] == 'aeotl' || s[i] == 'AEOTL')
-			s[i] = '43071';
+		for (j = 0; lowercase[j] != '\0'; j++)
+		{
+			if (s[i] == uppercase[j] || s[i] == lowercase[j])
+			{
+				s[i] = value[j];
+				break;
+			}
+		}
 	}
 
 	return (s);

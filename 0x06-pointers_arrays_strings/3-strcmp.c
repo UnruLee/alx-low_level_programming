@@ -22,7 +22,7 @@ int _strcmp(char *s1, char *s2)
 			result =  s2[i] - s1[i];
 		else
 			result = 0;
-
-		return (result);
 	}
+
+	return (result);
 }

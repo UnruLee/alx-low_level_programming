@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * rev_array - Entry point
+ * reverse_array - Entry point
  * @a: variable array character
  * @n: variable integer character
  *

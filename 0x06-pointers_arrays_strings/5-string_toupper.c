@@ -2,7 +2,7 @@
 
 /**
  * *string_toupper - Entry Point
- * @s - fill in variable
+ * @s: fill in variable
  *
  * Description: function that changes all string letters to uppercase
  *

@@ -1,4 +1,5 @@
 #include "main.h"
+#define NULL 0
 
 /**
  * *_strpbrk - Entry point

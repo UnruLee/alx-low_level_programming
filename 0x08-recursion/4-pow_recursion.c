@@ -2,14 +2,15 @@
 
 /**
  * _pow_recursion - Entry Point
- * @n: variable character
+ * @x: variable character
+ * @y: variable character
  *
  * Description: function that retursn the value of x raised to y
  *
  * Return:Always 0
  */
 
-int _pow_recursion(int n)
+int _pow_recursion(int x, int y)
 {
 	if (y > 0)
 		return (x * _pow_recursion(x, y - 1));

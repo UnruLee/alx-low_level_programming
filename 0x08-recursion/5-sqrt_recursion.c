@@ -8,7 +8,7 @@
  * Return: square root value
  */
 
-int suqare_root(int a, int b)
+int square_root(int a, int b)
 {
 	if (b == a * a)
 		return (b / a);

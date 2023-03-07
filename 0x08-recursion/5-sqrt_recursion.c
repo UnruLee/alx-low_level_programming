@@ -1,4 +1,4 @@
-#include "main.c"
+#include "main.h"
 
 /**
  * square_root - Entry point

@@ -12,12 +12,12 @@
 
 int prime_check(int x, int y)
 {
-	if (a == b)
+	if (x == y)
 		return (1);
-	else if (a % b == 0)
+	else if (x % y == 0)
 		return (0);
 
-	return (prime_check(a, b + 1));
+	return (prime_check(x, y + 1));
 }
 
 /**

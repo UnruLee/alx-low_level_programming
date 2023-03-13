@@ -6,21 +6,11 @@
  * @argc: number of command line arguments
  * @argv: contains the program command line arguments
  *
- * Description: program that prints all arguments it receives
+ * Description: a program that multiplies two numbers
  *
  * Return: Always 0
  */
 
 int main(int argc, char *argv[])
 {
-	int i;
-
-	i = 0;
-	while (i < argc)
-	{
-		printf("%s\n", argv[i]);
-		i++;
-	}
-
-	return (0);
-}
+	if (arg

@@ -8,7 +8,7 @@
  *
  * Description: A program that prints its name, followed by a new line
  *
- * Result: Always 0
+ * Return: Always 0
  */
 
 int main(int argc, char *argv[])

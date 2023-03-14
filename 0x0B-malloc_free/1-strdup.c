@@ -24,12 +24,12 @@ char *_strdup(char *str)
 	while (*(str + i) != '\0')
 		i++;
 
-	arr = malloc(sizeof(char) * (i + 1));
+	arr = malloc((sizeof(char)* i) + 1);
 
-	if (arr == 0)
-		return (0);
+	if (arr == NULL)
+		return (NULL);
 
-	for (j = 0; j <= 1; j++)
+	for (j = 0; j <= i; j++)
 		*(arr + j) = *(str + j);
 
 	return (arr);

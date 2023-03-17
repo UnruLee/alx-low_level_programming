@@ -9,22 +9,22 @@
  *
  * Description: function that allocates memory for an array
  *
- * Return: returns a pointter to the allocated memory
+ * Return: returns a pointer to the allocated memory
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	unsigned int i;
 	char *arr;
 
-	if (nmeb == 0 || size == 0)
+	if (nmemb == 0 || size == 0)
 		return (NULL);
 
-	arr = malloc(size * nmeb);
+	arr = malloc(size * nmemb);
 
 	if (arr == NULL)
 		return (NULL);
 
-	for (i = 0; i < size * nmeb; i++)
+	for (i = 0; i < size * nmemb; i++)
 		arr[i] = 0;
 
 	return (arr);

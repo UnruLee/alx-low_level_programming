@@ -23,19 +23,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s2 == NULL)
 		s2 = "";
 
-	j = 0;
-	while (s1[j] != '\0')
-	{
-		i++;
+	for (j = 0; s1[j] != '\0'; i++)
 		;
-	}
 
-	k = 0;
-	while (s2[k] != '\0')
-	{
-		k++;
+	for (k = 0; s2[k] != '\0'; k++)
 		;
-	}
 
 	if (k <= n)
 		n = k;

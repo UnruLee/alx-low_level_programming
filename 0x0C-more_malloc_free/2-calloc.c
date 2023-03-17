@@ -4,14 +4,14 @@
 
 /**
  * _calloc - Entry point
- * @nmeb: variable character
+ * @nmemb: variable character
  * @size: variable character
  *
  * Description: function that allocates memory for an array
  *
  * Return: returns a pointter to the allocated memory
  */
-void *_calloc(unsigned int nmeb, unsigned int size)
+void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	unsigned int i;
 	char *arr;

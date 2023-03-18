@@ -39,13 +39,13 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (t == NULL)
 		return (NULL);
 
-	for (i = 0; i < a; l++)
+	for (i = 0; i < a; i++)
 		*(t + i) = *(s1 + i);
 
 	for (i = 0, j = a; i < b; j++, i++)
 		*(t + j) = *(s2 + i);
 
-	*(t + j] = '\0';
+	*(t + j) = '\0';
 
 	return (t);
 }

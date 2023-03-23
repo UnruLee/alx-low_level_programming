@@ -29,7 +29,7 @@ void print_strings(const char *separator, unsigned int n, ...)
 	{
 		str = va_arg(params, char *);
 		if (str == NULL)
-			str = "";
+			str = "(nil)";
 
 		if (i != n - 1)
 		{

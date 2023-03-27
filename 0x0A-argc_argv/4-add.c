@@ -55,7 +55,7 @@ int main(int argc, char *argv[])
 		while (i < argc)
 		{
 			num = is_number(argv[i]);
-			if (is_num == 1)
+			if (num == 1)
 			{
 				res += atoi(argv[i]);
 			}

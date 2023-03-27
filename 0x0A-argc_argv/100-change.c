@@ -1,80 +1,86 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <ctype.h>
-#include <stdbool.h>
 
 /**
- * changeCents - entry point
- * @i: Passed in variable from main for calculations
+ * change_cent - entr point
+ * @n: money amount
  *
- * Description: function that calculates the change
+ * Description: finds least number of coins
  *
- * Return: The number of coins needed minimum for the passed in variable
+ * Return: number of coins
  */
 
-int changeCents(int i)
+int change_cent(int n)
 {
-	int count = 0;
+	int coins, quarters, dimes, nickels, twocents, pennies;
 
-	while (i != 0)
+	coins = 0;
+	quarters = 0;
+	dimes = 0;
+	nickels = 0;
+	twocents = 0;
+	pennies = 0;
+
+	while (n > 0)
 	{
-		if (i % 10 == 9 || i % 10 == 7)
-			i -= 2;
-		else if (i % 25 == 0)
-			i -= 25;
-		else if (i % 10 == 0)
-			i -= 10;
-		else if (i % 5 == 0)
-			i -= 5;
-		else if (i % 2 == 0)
+		if (n >= 25)
 		{
-			if (i % 10 == 6)
-				i -= 1;
-			else
-				i -= 2;
+			n -= 25;
+			quarters += 1;
+		}
+		else if (n >= 10)
+		{
+			n -= 10;
+			dimes += 1;
+		}
+		else if (n >= 5)
+		{
+			n -= 5;
+			nickels += 1;
+		}
+		else if (n >= 2)
+		{
+			n -= 2;
+			twocents += 1;
 		}
 		else
-			i -= 1;
-
-		count++;
+		{
+			n -= 1;
+			pennies += 1;
+		}
 	}
+	coins = quarters + dimes + nickels + twocents + pennies;
 
-	return (count);
+	return (coins);
 }
 
 /**
- * main - entry point
- * @argc: Number of command line arguments
- * @argv: Array name
+ * main - prints minimum number of coins to make change
+ * @argc: number of arguments
+ * @argv: array of arguments
  *
- * Description: Takes in one argument for coin count
- *
- * Return: 0 if exactly 1 argument is passed into this program, 1 otherwise
+ * Description: prints least number of coins to make change
+ * Return: (0)
  */
 
 int main(int argc, char *argv[])
 {
-	int i, coin;
-
-	coin = 0;
+	int coins;
 
 	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
-
-	i = atoi(argv[1]);
-
-	if (i < 0)
+	else if (atoi(argv[1]) < 0)
+	{
 		printf("0\n");
+	}
 	else
 	{
-		coin = changeCents(i);
-
-		printf("%d\n", coin);
+		coins = change_cent(atoi(argv[1]));
+		printf("%d\n", coins);
 	}
-
 	return (0);
 }

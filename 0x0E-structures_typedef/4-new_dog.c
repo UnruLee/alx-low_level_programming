@@ -1,71 +1,81 @@
 #include "dog.h"
+#include <stdio.h>
 #include <stdlib.h>
 
 /**
- * _strdup - returns a pointer to a newly allocated space in memory
- * @str: string to copy
+ * _strdup - entry point
+ * @str: string variable
  *
  * Description: returns a pointer to a newly allocated space in memory
  *
- * Return: Success
+ * Return: pointer to newly allocated space in memory
  */
+
 char *_strdup(char *str)
 {
-	int n, i;
-	char *str;
+	int len, i;
+	char *arr;
 
 	if (str == NULL)
-		return (0);
-
-	n = 0;
-	while (*(s + n))
-		n++;
-
-	s = malloc(sizeof(char) * l + 1);
-
-	if (s == 0)
-		return (0);
-
-	for (i = 0; i <= n; i++)
 	{
-		*(s + i) = *(str + i);
+		return (NULL);
 	}
-	return (s);
+
+	len = 0;
+	while (*(str + len) != '\0')
+	{
+		len++;
+	}
+
+	arr = (char*) malloc(len * sizeof(char) + 1);
+	if (arr == NULL)
+		return (NULL);
+	
+	for (i = 0; i < len; i++)
+	{
+		arr[i] = str[i];
+	}
+	arr[i] = '\0';
+
+	return (arr);
 }
 
 /**
  * new_dog - entry point
- * @name: name of dog
- * @age: age of dog
- * @owner: owner of dog
+ * @name: dog's name
+ * @age: dog's age
+ * @owner: dog's owner
  *
  * Description: creates a new dog
  *
- * Return: On success 1.
+ * Return: new_dog (dog_t)
  */
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *new_dog;
+	dog_t *dog;
+	char *dog_name, *dog_owner;
 
-	new_dog = malloc(sizeof(struct dog));
+	dog = malloc(sizeof(dog_t));
+	if (dog == NULL)
+		return (NULL);
 
-	if (new_dog == 0 || name == 0 || owner == 0)
-		return (0);
-
-	new_dog->name = _strdup(name);
-	if (new_dog->name == 0)
+	dog_name = _strdup(name);
+	if (dog_name == NULL)
 	{
-		free(new_dog);
-		return (0);
+		free(dog);
+		return (NULL);
 	}
-	new_dog->age = age;
-	new_dog->owner = _strdup(owner);
-	if (new_dog->owner == 0)
+
+	dog_owner = _strdup(owner);
+	if (dog_owner == NULL)
 	{
-		free(new_dog);
-		free(new_dog->name);
-		return (0);
+		free(dog_name);
+		free(dog);
+		return (NULL);
 	}
-	return (new_dog);
+	dog->name = dog_name;
+	dog->age = age;
+	dog->owner = dog_owner;
+	return (dog);
 }

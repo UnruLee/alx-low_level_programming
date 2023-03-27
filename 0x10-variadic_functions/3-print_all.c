@@ -3,6 +3,53 @@
 #include <stdio.h>
 
 /**
+ * for_char - print char
+ * @params: list of arguments
+ */
+
+void for_char(va_list params)
+{
+	printf("%c", va_arg(params, int));
+}
+
+/**
+ * for_int - print int
+ * @params: list of arguments
+ */
+
+void for_int(va_list params)
+{
+	printf("%d", va_arg(params, int));
+}
+
+/**
+ * for_float - print float
+ * @params: list of arguments
+ */
+
+void for_float(va_list params)
+{
+	printf("%f", va_arg(params, double));
+}
+
+/**
+ * for_string - print string
+ * @params: list of arguments
+ */
+
+void for_string(va_list params)
+{
+	char *str = va_arg(params, char *);
+
+	if (str == NULL)
+	{
+		printf("(nil)");
+		return;
+	}
+	printf("%s", str);
+}
+
+/**
  * print_all - entry point
  * @format: variable character
  *
@@ -13,40 +60,34 @@
 
 void print_all(const char * const format, ...)
 {
-	int i = 0;
+	int i, j;
 	va_list params;
-	char *s = "(nil)";
-	char *arr = NULL;
+	char *s = "";
 	char *div = ", ";
 
-	va_start(params, format);
+	fx_l ops[] = {
+		{'c', for_char},
+		{'i', for_int},
+		{'f', for_float},
+		{'s', for_string},
+		{'\0', NULL}
+	};
 
+	va_start(params, format);
+	i = 0;
 	while (format[i] != '\0' && format != NULL)
 	{
-		switch (format[i])
+		j = 0;
+		while (ops[j].c != '\0')
 		{
-			case 'c':
-				printf("%c", va_arg(params, int));
-				break;
-			case 'i':
-				printf("%d", va_arg(params, int));
-				break;
-			case 'f':
-				printf("%f", va_arg(params, double));
-				break;
-			case 's':
-				arr = va_arg(params, char *);
-				if (arr == NULL)
-					arr = s;
-				printf("%s", arr);
-				break;
-			default:
-				i++;
-				continue;
+			if (ops[j].c == format[i])
+			{
+				printf("%s", s);
+				ops[j].f(params);
+				s = div;
+			}
+			j++;
 		}
-		if ((format[i + 1] != '\0') && (format[i] == 'c' || format[i] == 'i'||
-					format[i] == 'f' || format[i] == 's'))
-			printf("%s", div);
 		i++;
 	}
 	printf("\n");

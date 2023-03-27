@@ -27,10 +27,10 @@ char *_strdup(char *str)
 		len++;
 	}
 
-	arr = (char*) malloc(len * sizeof(char) + 1);
+	arr = (char *) malloc(len * sizeof(char) + 1);
 	if (arr == NULL)
 		return (NULL);
-	
+
 	for (i = 0; i < len; i++)
 	{
 		arr[i] = str[i];

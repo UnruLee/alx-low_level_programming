@@ -3,7 +3,7 @@
 #include "main.h"
 
 /**
- *  sqrt - entry point
+ *  sqrtPre - entry point
  *  @c: function paramater one
  *  @d: functin parameter two
  *
@@ -12,13 +12,13 @@
  *  Return: Always 0
  */
 
-int sqrt(int c, int d)
+int sqrtPre(int c, int d)
 {
 	if (d * d == c)
 		return (b);
 	if (d * d > c)
 		return (-1);
-	return (sqrt(c, d + 1));
+	return (sqrtPre(c, d + 1));
 }
 
 /**
@@ -32,5 +32,5 @@ int sqrt(int c, int d)
 
 int _sqrt_recursion(int n)
 {
-	return (sqrt(n, 1));
+	return (sqrtPre(n, 1));
 }

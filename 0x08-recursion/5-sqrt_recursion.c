@@ -15,7 +15,7 @@
 int sqrtPre(int c, int d)
 {
 	if (d * d == c)
-		return (b);
+		return (d);
 	if (d * d > c)
 		return (-1);
 	return (sqrtPre(c, d + 1));

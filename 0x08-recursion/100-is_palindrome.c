@@ -26,7 +26,7 @@ int check1(char *t)
  *  Return: Always 0
  */
 
-int check2(int p, int k)
+int check2(char p, char k)
 {
 	if (p > k)
 		return (1);

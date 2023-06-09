@@ -1,6 +1,8 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdio.lib>
+#include <ctype.h>
+#include <stdbool.h>
 
 /**
  * coin_num - finds least number of coins

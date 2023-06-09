@@ -5,7 +5,7 @@
  * @argc: a count of the arguments supplied to the program
  * @argv: an array of pointers to the strings supplied to the program
  *
- * Description: a program that prints the number of arguments passed into it.
+ * Description:
  *
  * Return: Always 0
  */

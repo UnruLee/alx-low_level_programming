@@ -26,32 +26,32 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	x = 0, y = 0;
 	while (s1[x])
 		x++;
-	while (s2[y])
-		y++;
+	while (s2[i])
+		i++;
 
-	if (n >= y)
-		j = x + y;
+	if (n >= i)
+		j = x + i;
 	else
 		j = x + n;
 
-	s = malloc(sizeof(char) * l + 1);
+	s = malloc(sizeof(char) * j + 1);
 
 	if (s == NULL)
 		return (NULL);
 
-	y = 0;
-	while (i < j)
+	i = 0;
+	while (y < j)
 	{
-		if (i <= x)
-			s[i] = s1[i];
-		if (i >= x)
+		if (y <= x)
+			s[y] = s1[y];
+		if (y >= x)
 		{
-			s[i] = s2[y];
-			y++;
+			s[y] = s2[i];
+			i++;
 		}
-		i++;
+		y++;
 	}
-	s[j] = '\0';
+	s[y] = '\0';
 
 	return (s);
 }

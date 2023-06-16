@@ -12,7 +12,7 @@
  * Return: 0 (success)
  */
 
-int *array-range(int min, int max)
+int *array_range(int min, int max)
 {
 	int *c, i = 0;
 

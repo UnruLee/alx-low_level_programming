@@ -21,12 +21,12 @@ int *array-range(int min, int max)
 
 	c = malloc((sizeof(int) * (max - min)) + sizeof(int));
 
-	if (a == NULL)
+	if (c == NULL)
 		return (NULL);
 
 	while (min <= max)
 	{
-		a[i] = min;
+		c[i] = min;
 		i++;
 		min++;
 	}

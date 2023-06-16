@@ -7,7 +7,7 @@
  * @s1: is a variable character
  * @s2: is a variable character
  * @n: is a variable character
- *
+ *i
  * Description:  a function that concatenates two strings.
  *
  * Return: 0 (success)
@@ -15,7 +15,7 @@
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int x, y, i, j;
+	unsigned int x = 0, y = 0, i = 0, j = 0;
 	char *s;
 
 	if (s1 == NULL)
@@ -23,7 +23,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s2 == NULL)
 		s2 = "";
 
-	x = 0, y = 0;
 	while (s1[x])
 		x++;
 	while (s2[i])

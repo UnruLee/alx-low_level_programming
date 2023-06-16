@@ -31,5 +31,5 @@ int *array-range(int min, int max)
 		min++;
 	}
 
-	return (a);
+	return (c);
 }

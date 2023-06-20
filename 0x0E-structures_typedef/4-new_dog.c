@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * checkFun - Entry point
+ * _strdup - Entry point
  * @s: is a variable character
  *
  * Description: checkFun
@@ -11,7 +11,7 @@
  * Return: 0 (success)
  */
 
-char *checkFun(char *s)
+char *_strdup(char *s)
 {
 	int k, j;
 	char *t;
@@ -57,14 +57,14 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (rux == NULL)
 		return (NULL);
 
-	rux_name = checkFun(name);
+	rux_name = _strdup(name);
 	if (rux_name == NULL)
 	{
 		free(rux);
 		return (NULL);
 	}
 
-	rux_owner = checkFun(owner);
+	rux_owner = _strdup(owner);
 	if (rux_owner == NULL)
 	{
 		free(rux_name);

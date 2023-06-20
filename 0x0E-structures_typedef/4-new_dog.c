@@ -23,7 +23,7 @@ char *checkFun(char *s)
 	while (*(s + k) != '\0')
 		k++;
 
-	t = (char *)malloc(sizeof(char) * k + 1);
+	t = (char *)malloc(k * sizeof(char) + 1);
 
 	if (t == NULL)
 		return (NULL);

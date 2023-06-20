@@ -6,7 +6,7 @@
  * checkFun - Entry point
  * @s: is a variable character
  *
- * Description:
+ * Description: checkFun
  *
  * Return: 0 (success)
  */
@@ -34,7 +34,7 @@ char *checkFun(char *s)
 	}
 	t[j] = '\0';
 
-	return (arr);
+	return (t);
 }
 
 /**

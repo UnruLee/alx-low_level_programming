@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * _strncat - Entry point
+ * array_iterator - Entry point
  * @action: is a variable character
  * @size: is a variable character
  * @array: is a variable character

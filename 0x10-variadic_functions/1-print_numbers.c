@@ -17,6 +17,12 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	unsigned int i;
 	va_list params;
 
+	if (n == 0)
+	{
+		printf("\n");
+		return;
+	}
+
 	if (separator == 0)
 		separator = "";
 
@@ -27,5 +33,4 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 
 	printf("%d\n", va_arg(params, int));
 	va_end(params);
-	printf("\n");
 }

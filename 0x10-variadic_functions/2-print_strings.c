@@ -43,5 +43,5 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	else
 		printf("(nil)\n");
 
-	va_end(list);
+	va_end(params);
 }

@@ -18,7 +18,7 @@ typedef struct new_list
 {
 	char *s;
 	unsigned int l;
-	struct list_s *next;
+	struct new_list *next;
 } list_t;
 
 int _putchar(char c);

@@ -8,7 +8,7 @@
 /**
  * struct new_list - define list
  * @str: string variable
- * @l: string length
+ * @len: string length
  * @next: pointer to next node
  *
  * Description: define list

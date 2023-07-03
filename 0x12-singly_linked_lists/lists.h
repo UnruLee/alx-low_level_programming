@@ -7,7 +7,7 @@
 
 /**
  * struct new_list - define list
- * @s: string variable
+ * @str: string variable
  * @l: string length
  * @next: pointer to next node
  *
@@ -16,7 +16,7 @@
 
 typedef struct new_list
 {
-	char *s;
+	char *str;
 	unsigned int l;
 	struct new_list *next;
 } list_t;

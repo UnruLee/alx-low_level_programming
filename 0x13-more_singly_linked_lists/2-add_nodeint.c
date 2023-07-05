@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * addnote_int - entry point
+ * add_nodeint - entry point
  * @head: function variable
  * @n: integer
  *
@@ -15,14 +15,14 @@
 
 listint_t *add_nodeint(listint_t **head, const int n)
 {
-	listint_t *new;
+	listint_t *list_node;
 
-	new = malloc(sizeof(listint_t));
-	if (new == NULL)
+	list_node = malloc(sizeof(listint_t));
+	if (list_node == NULL)
 		return (NULL);
-	new->n = n;
-	new->next = *head;
-	*head = new;
+	list_node->n = n;
+	list_node->next = *head;
+	*head = list_node;
 
-	return (new);
+	return (list_node);
 }

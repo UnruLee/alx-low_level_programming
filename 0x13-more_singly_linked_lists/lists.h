@@ -5,14 +5,13 @@
 #include <string.h>
 
 /**
- * struct new_list - new struct list
- * @n: struct variable
+ * struct listint_s - singly linked list
+ * @n: integer
  * @next: points to the next node
  *
- * Description: declaration of singly linked list
+ * Description: singly linked list node structure
  */
-
-typedef struct new_list
+typedef struct listint_s
 {
 	int n;
 	struct listint_s *next;
